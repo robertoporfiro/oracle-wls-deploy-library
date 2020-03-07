@@ -35,7 +35,7 @@ for appName in appList:
   domainConfig()
   cd ('/AppDeployments/'+appName+'/Targets')
   mytargets = ls(returnMap='true')
-# print mytargets
+  # print mytargets
   domainRuntime()
   cd('AppRuntimeStateRuntime')
   cd('AppRuntimeStateRuntime')
@@ -49,11 +49,11 @@ for appName in appList:
     print '\n'
     if currentAppStatus == 'STATE_RETIRED':
       print "This app is RETIRED " + appName
-#email that the script has taken an action
+      #email that the script has taken an action
       print '=============================================================='
       print "Undeploying app " + appName
       print '\n'
-# stopApplication(appName)
+      # stopApplication(appName)
       undeploy_app(appName,targetinst)
       pwd()
       domainConfig()
